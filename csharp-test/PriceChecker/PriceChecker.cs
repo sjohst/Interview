@@ -14,7 +14,7 @@ namespace PriceChecker
 		/// The number of dates with at least n official prices.
 		/// </returns>
 		/// <param name="prices">Input prices coming from MSD.</param>
-		/// <param name="b">The threshold on number of prices.</param>
+		/// <param name="n">The threshold on number of prices.</param>
 		public int CheckPrices(List<PriceDto> prices, int n)
         {
             //body to add
@@ -23,14 +23,14 @@ namespace PriceChecker
 
             return count;
         }
+	}
 
-		public class PriceDto
-		{
-			public long ProductId { get; set; }
-			public DateTime Date { get; set; }
-			public bool IsOfficial { get; set; }
-			public double Value { get; set; }
-		}
+	public class PriceDto
+	{
+		public long ProductId { get; set; }
+		public DateTime Date { get; set; }
+		public bool IsOfficial { get; set; }
+		public double Value { get; set; }
 	}
 }
 
